@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px;
+}
+
+body {
+  background-color: rgb(16, 16, 16);
+  color: gainsboro;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 3em;
+  padding: 2em;
+  text-align: center;
+}
