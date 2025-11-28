@@ -10,15 +10,15 @@ body {
 }
 
 header h1 {
-  font-size: 3em;
-  margin: 0.5em;
-  padding: 1em;
+  font-size: 6em;
+  margin: 0.125em;
+  padding: 0.125em;
   text-align: center;
 }
 
 #grid-container {
   display: grid;
-  grid-template-columns: 4fr 6fr 4fr;
+  grid-template-columns: 4fr 16fr 4fr;
   grid-template-rows: 256px;
 }
 
@@ -58,5 +58,52 @@ header h1 {
   img {
     margin: auto;
     padding: 2px;
+  }
+}
+
+@media only screen and (max-width: 1376px) {
+  header h1 {
+    font-size: 200%;
+    margin: 0.25em;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  #grid-container {
+    display: grid;
+    grid-template-columns: 4fr 10fr 4fr;
+    grid-template-rows: 128px;
+  }
+
+  #maximized-image-grid-container {
+    display: grid;
+    grid-template-columns: 1.25fr 6fr 1.25fr;
+    grid-template-rows: 8em;
+  }
+
+  #maximized-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    object-position: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    img {
+      display: flex;
+      margin-top: 1em;
+      padding: 1em;
+      max-width: 75%;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 4fr 8fr 4fr;
+    grid-template-rows: 64px;
   }
 }
