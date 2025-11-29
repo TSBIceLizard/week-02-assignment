@@ -3,11 +3,18 @@ console.log("My app.js is working");
 
 //===============Global Scope Variable Declaration==========//
 const thumbnailContainer = document.getElementById("thumbnail-container");
+const maximizedImageGridContainer = document.getElementById(
+  "maximized-image-grid-container"
+);
 const maximizedImageContainer = document.getElementById(
   "maximized-image-container"
 );
 
 const drawFullImg = document.createElement("img");
+
+// const fullImgDrawnTextCont = document.createElement("div");
+const fullImgDrawnTextP = document.createElement("p");
+
 //===============Global Scope Variable Declaration==========//
 //I wish I knew the difference between document.getElementById and document.querySelector
 
@@ -120,6 +127,10 @@ function createDefaultFullImg() {
   drawFullImg.src = imageFullSize[0].imageSRC;
   drawFullImg.alt = imageFullSize[0].imageAlt;
   drawFullImg.id = imageFullSize[0].imageId;
+  // maximizedImageContainer.appendChild(fullImgDrawnTextCont);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
+  // fullImgDrawnTextP.id = "fullsize-image-text";
+  // fullImgDrawnTextP.textContent = imageFullSize[0].imageAlt;
 }
 
 createDefaultFullImg();
@@ -128,50 +139,68 @@ createDefaultFullImg();
 captureThumbId1.addEventListener("click", function () {
   console.log("Thumb 1 click success. The listener hears!");
   maximizedImageContainer.removeChild(drawFullImg);
+  // maximizedImageContainer.removeChild(fullImgDrawnTextP);
   maximizedImageContainer.appendChild(drawFullImg);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
   drawFullImg.src = imageFullSize[0].imageSRC;
   drawFullImg.alt = imageFullSize[0].imageAlt;
   drawFullImg.id = imageFullSize[0].imageId;
-  //   maximizedImageContainer.replaceChild(drawFullImg, drawFullImg);
+  // fullImgDrawnTextP.textContent = imageFullSize[0].imageAlt;
+  // document.getElementById("fullsize-image-text").style.fontSize("4em");
 });
 
 captureThumbId2.addEventListener("click", function () {
   console.log("Thumb 2 click success. The listener hears!");
   maximizedImageContainer.removeChild(drawFullImg);
+  // maximizedImageContainer.removeChild(fullImgDrawnTextP);
   maximizedImageContainer.appendChild(drawFullImg);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
   drawFullImg.src = imageFullSize[1].imageSRC;
   drawFullImg.alt = imageFullSize[1].imageAlt;
   drawFullImg.id = imageFullSize[1].imageId;
+  // fullImgDrawnTextP.textContent = imageFullSize[1].imageAlt;
+  // document.getElementById("fullsize-image-text").style.fontSize("2em");
 });
 
 captureThumbId3.addEventListener("click", function () {
   console.log("Thumb 3 click success. The listener hears!");
   maximizedImageContainer.removeChild(drawFullImg);
+  // maximizedImageContainer.removeChild(fullImgDrawnTextP);
   maximizedImageContainer.appendChild(drawFullImg);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
   drawFullImg.src = imageFullSize[2].imageSRC;
   drawFullImg.alt = imageFullSize[2].imageAlt;
   drawFullImg.id = imageFullSize[2].imageId;
+  // fullImgDrawnTextP.textContent = imageFullSize[2].imageAlt;
 });
 
 captureThumbId4.addEventListener("click", function () {
   console.log("Thumb 4 click success. The listener hears!");
   maximizedImageContainer.removeChild(drawFullImg);
+  // maximizedImageContainer.removeChild(fullImgDrawnTextP);
   maximizedImageContainer.appendChild(drawFullImg);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
   drawFullImg.src = imageFullSize[3].imageSRC;
   drawFullImg.alt = imageFullSize[3].imageAlt;
   drawFullImg.id = imageFullSize[3].imageId;
+  // fullImgDrawnTextP.textContent = imageFullSize[3].imageAlt;
 });
 
 captureThumbId5.addEventListener("click", function () {
   console.log("Thumb 5 click success. The listener hears!");
   maximizedImageContainer.removeChild(drawFullImg);
+  // maximizedImageContainer.removeChild(fullImgDrawnTextP);
   maximizedImageContainer.appendChild(drawFullImg);
+  // maximizedImageContainer.appendChild(fullImgDrawnTextP);
   drawFullImg.src = imageFullSize[4].imageSRC;
   drawFullImg.alt = imageFullSize[4].imageAlt;
   drawFullImg.id = imageFullSize[4].imageId;
+  // fullImgDrawnTextP.textContent = imageFullSize[4].imageAlt;
 });
-
 //===============Trigger Thumbnails==============//
+
+// if (drawFullImg.id == imageFullSize[0].imageId) {
+// }
 
 //STEP 2: create thumbnail images
 // function createThumbnails() {
